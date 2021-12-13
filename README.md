@@ -8,6 +8,7 @@
     - Maven
 * Android (Java app)
     - Android studio
+    - ### [Change this file if you want to run this app](https://github.com/hakanyilmazz/YemekTarifimProject/blob/main/yemek-tarifim-android/android/app/src/main/java/com/tezodevi/android/util/LocalhostHelper.java)
 * Machine Learning (Python app)
     - Anaconda program
     - Python latest version
