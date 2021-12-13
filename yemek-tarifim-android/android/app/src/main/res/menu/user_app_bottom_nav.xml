@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/userAppBottomNav_friendPosts"
+        android:icon="@drawable/ic_person"
+        android:title="@string/friend_posts" />
+    <item
+        android:id="@+id/userAppBottomNav_allPosts"
+        android:icon="@drawable/ic_people"
+        android:title="@string/all_posts" />
+    <item
+        android:id="@+id/userAppBottomNav_competition"
+        android:icon="@drawable/ic_competition"
+        android:title="@string/competition" />
+    <item
+        android:id="@+id/userAppBottomNav_profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/profile" />
+</menu>

@@ -1,0 +1,11 @@
+- Anaconda program
+- pip install plotly-express
+- pip install wordcloud
+- pip install lightgbm
+
+Note: If an error is encountered when the program is run, the necessary libraries should be downloaded.
+
+Example:
+        ImportError: The _imagingft C module is not installed
+        - pip uninstall pillow
+        - pip install --no-cache-dir pillow

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.user.fragment.editprofile.EditProfileFragment">
+
+    <Button
+        android:id="@+id/editProfileFragment_editButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:minHeight="56dp"
+        android:text="@string/edit_profile"
+        app:layout_constraintEnd_toEndOf="@+id/fragmentEditProfile_countrySpinnerLayout"
+        app:layout_constraintStart_toStartOf="@+id/fragmentEditProfile_countryTextView"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentEditProfile_countrySpinnerLayout" />
+
+    <TextView
+        android:id="@+id/fragmentEditProfile_countryTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/select_country"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/fragmentEditProfile_ageText"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentEditProfile_ageText" />
+
+    <Spinner
+        android:id="@+id/fragmentEditProfile_countrySpinnerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/fragmentEditProfile_countryTextView"
+        app:layout_constraintEnd_toEndOf="@+id/fragmentEditProfile_ageText"
+        app:layout_constraintStart_toEndOf="@+id/fragmentEditProfile_countryTextView"
+        app:layout_constraintTop_toTopOf="@+id/fragmentEditProfile_countryTextView" />
+
+    <ImageView
+        android:id="@+id/fragmentEditProfile_profilePhoto"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="146dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/select_photo"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fragmentEditProfile_nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/text_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fragmentEditProfile_profilePhoto"
+        app:layout_constraintTop_toTopOf="@+id/fragmentEditProfile_profilePhoto" />
+
+
+    <EditText
+        android:id="@+id/fragmentEditProfile_surnameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_surname"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fragmentEditProfile_profilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentEditProfile_nameText" />
+
+
+    <EditText
+        android:id="@+id/fragmentEditProfile_emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fragmentEditProfile_profilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentEditProfile_surnameText" />
+
+
+    <EditText
+        android:id="@+id/fragmentEditProfile_usernameText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/normal_text_username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/fragmentEditProfile_emailText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/fragmentEditProfile_profilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentEditProfile_emailText" />
+
+    <EditText
+        android:id="@+id/fragmentEditProfile_passwordText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/normal_text_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/fragmentEditProfile_emailText"
+        app:layout_constraintStart_toStartOf="@+id/fragmentEditProfile_profilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentEditProfile_usernameText" />
+
+    <EditText
+        android:id="@+id/fragmentEditProfile_ageText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/text_age"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/fragmentEditProfile_emailText"
+        app:layout_constraintStart_toStartOf="@+id/fragmentEditProfile_profilePhoto"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentEditProfile_passwordText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

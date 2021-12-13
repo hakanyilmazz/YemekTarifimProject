@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_graph"
+    app:startDestination="@id/friendPostsFragment">
+
+    <fragment
+        android:id="@+id/friendPostsFragment"
+        android:name="com.tezodevi.android.view.user.fragment.friendposts.FriendPostsFragment"
+        android:label="friend_posts_fragment"
+        tools:layout="@layout/fragment_friend_posts">
+        <action
+            android:id="@+id/action_friendPostsFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_friendPostsFragment_to_allPostsFragment"
+            app:destination="@id/allPostsFragment" />
+        <action
+            android:id="@+id/action_friendPostsFragment_to_competitionFragment"
+            app:destination="@id/competitionFragment" />
+        <action
+            android:id="@+id/action_friendPostsFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_friendPostsFragment_to_allPostsFragment2"
+            app:destination="@id/allPostsFragment" />
+        <action
+            android:id="@+id/action_friendPostsFragment_self"
+            app:destination="@id/friendPostsFragment" />
+        <action
+            android:id="@+id/action_friendPostsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_friendPostsFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_friendPostsFragment_to_chattingFragment"
+            app:destination="@id/chattingFragment" />
+        <action
+            android:id="@+id/action_friendPostsFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allPostsFragment"
+        android:name="com.tezodevi.android.view.user.fragment.allposts.AllPostsFragment"
+        android:label="all_posts_fragment"
+        tools:layout="@layout/all_posts_fragment">
+        <action
+            android:id="@+id/action_allPostsFragment_to_competitionFragment"
+            app:destination="@id/competitionFragment" />
+        <action
+            android:id="@+id/action_allPostsFragment_to_friendPostsFragment"
+            app:destination="@id/friendPostsFragment" />
+        <action
+            android:id="@+id/action_allPostsFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_allPostsFragment_to_friendPostsFragment2"
+            app:destination="@id/friendPostsFragment" />
+        <action
+            android:id="@+id/action_allPostsFragment_to_friendPostsFragment3"
+            app:destination="@id/friendPostsFragment" />
+        <action
+            android:id="@+id/action_allPostsFragment_self"
+            app:destination="@id/allPostsFragment" />
+        <action
+            android:id="@+id/action_allPostsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_allPostsFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+        <action
+            android:id="@+id/action_allPostsFragment_to_addNewFriendFragment"
+            app:destination="@id/addNewFriendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/competitionFragment"
+        android:name="com.tezodevi.android.view.user.fragment.competition.CompetitionFragment"
+        android:label="competition_fragment"
+        tools:layout="@layout/competition_fragment">
+        <action
+            android:id="@+id/action_competitionFragment_to_allPostsFragment"
+            app:destination="@id/allPostsFragment" />
+        <action
+            android:id="@+id/action_competitionFragment_to_friendPostsFragment"
+            app:destination="@id/friendPostsFragment" />
+        <action
+            android:id="@+id/action_competitionFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_competitionFragment_self"
+            app:destination="@id/competitionFragment" />
+        <action
+            android:id="@+id/action_competitionFragment_to_allPostsFragment2"
+            app:destination="@id/allPostsFragment" />
+        <action
+            android:id="@+id/action_competitionFragment_to_friendPostsFragment2"
+            app:destination="@id/friendPostsFragment" />
+        <action
+            android:id="@+id/action_competitionFragment_to_settingFragment2"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_competitionFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_competitionFragment_to_startedCompetitionFragment"
+            app:destination="@id/startedCompetitionFragment" />
+        <action
+            android:id="@+id/action_competitionFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.tezodevi.android.view.user.fragment.setting.SettingFragment"
+        android:label="setting_fragment"
+        tools:layout="@layout/setting_fragment">
+        <action
+            android:id="@+id/action_settingFragment_self"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_friendPostsFragment"
+            app:destination="@id/friendPostsFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_competitionFragment"
+            app:destination="@id/competitionFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_allPostsFragment"
+            app:destination="@id/allPostsFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_editRolesFragment"
+            app:destination="@id/editRolesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.tezodevi.android.view.user.fragment.post.PostFragment"
+        android:label="post_fragment"
+        tools:layout="@layout/post_fragment">
+        <action
+            android:id="@+id/action_postFragment_to_friendPostsFragment"
+            app:destination="@id/friendPostsFragment" />
+        <action
+            android:id="@+id/action_postFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_postFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.tezodevi.android.view.user.fragment.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_competitionFragment"
+            app:destination="@id/competitionFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_allPostsFragment"
+            app:destination="@id/allPostsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_friendPostsFragment"
+            app:destination="@id/friendPostsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_allPostsFragment2"
+            app:destination="@id/allPostsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_competitionFragment2"
+            app:destination="@id/competitionFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_settingFragment2"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_friendListFragment"
+            app:destination="@id/friendListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.tezodevi.android.view.user.fragment.recipedetail.RecipeDetailFragment"
+        android:label="fragment_recipe_detail"
+        tools:layout="@layout/fragment_recipe_detail">
+        <action
+            android:id="@+id/action_recipeDetailFragment_to_allPostsFragment"
+            app:destination="@id/allPostsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.tezodevi.android.view.user.fragment.editprofile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewFriendFragment"
+        android:name="com.tezodevi.android.view.user.fragment.addnewfriend.AddNewFriendFragment"
+        android:label="fragment_add_new_friend"
+        tools:layout="@layout/fragment_add_new_friend">
+        <action
+            android:id="@+id/action_addNewFriendFragment_to_allPostsFragment"
+            app:destination="@id/allPostsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chattingFragment"
+        android:name="com.tezodevi.android.view.user.fragment.chatting.ChattingFragment"
+        android:label="fragment_chatting"
+        tools:layout="@layout/fragment_chatting">
+        <action
+            android:id="@+id/action_chattingFragment_to_friendPostsFragment"
+            app:destination="@id/friendPostsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendListFragment"
+        android:name="com.tezodevi.android.view.user.fragment.friendlist.FriendListFragment"
+        android:label="fragment_friend_list"
+        tools:layout="@layout/fragment_friend_list">
+        <action
+            android:id="@+id/action_friendListFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.tezodevi.android.view.user.fragment.message.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message">
+        <action
+            android:id="@+id/action_messageFragment_to_friendPostsFragment"
+            app:destination="@id/friendPostsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editRolesFragment"
+        android:name="com.tezodevi.android.view.user.fragment.editroles.EditRolesFragment"
+        android:label="fragment_edit_roles"
+        tools:layout="@layout/fragment_edit_roles">
+        <action
+            android:id="@+id/action_editRolesFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startedCompetitionFragment"
+        android:name="com.tezodevi.android.view.user.fragment.competition.StartedCompetitionFragment"
+        android:label="fragment_started_competition"
+        tools:layout="@layout/fragment_started_competition">
+        <action
+            android:id="@+id/action_startedCompetitionFragment_to_competitionFragment"
+            app:destination="@id/competitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.tezodevi.android.view.user.fragment.score.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score">
+        <action
+            android:id="@+id/action_scoreFragment_to_competitionFragment"
+            app:destination="@id/competitionFragment" />
+    </fragment>
+</navigation>

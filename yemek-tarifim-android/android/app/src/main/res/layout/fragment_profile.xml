@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.user.fragment.profile.ProfileFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profileFragment_recipeListRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <ProgressBar
+        android:id="@+id/profileFragment_loadingProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profileFragment_recipeListRecyclerView" />
+
+    <TextView
+        android:id="@+id/profileFragment_noRecipeHereText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_recipe_here"
+        android:textColor="@color/red"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profileFragment_recipeListRecyclerView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/profileFragment_userImage"
+                android:layout_width="120sp"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/profileFragment_shareRecipeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/red"
+                android:text="@string/title_share_recipe"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/profileFragment_userImage" />
+
+            <TextView
+                android:id="@+id/profileFragment_friendCount"
+                android:layout_width="wrap_content"
+                style="?android:borderlessButtonStyle"
+                android:layout_height="wrap_content"
+                android:hint="@string/friends_n0"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/profileFragment_shareRecipeButton"
+                app:layout_constraintEnd_toStartOf="@+id/profileFragment_editProfile"
+                app:layout_constraintStart_toStartOf="@+id/profileFragment_shareRecipeButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profileFragment_editProfile"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/edit_profile"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_edit_24"
+                app:layout_constraintEnd_toStartOf="@+id/profileFragment_settings"
+                app:layout_constraintTop_toTopOf="@+id/profileFragment_settings" />
+
+            <ImageView
+                android:id="@+id/profileFragment_settings"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="52dp"
+                android:layout_height="45dp"
+                android:contentDescription="@string/profile_settings"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_outline_settings_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

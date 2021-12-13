@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.auth.RegisterActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerActivity_nameLayout"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/registerActivity_surnameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/registerActivity_profileImageView"
+        app:startIconDrawable="@drawable/ic_username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerActivity_surnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_name"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerActivity_surnameLayout"
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/registerActivity_profileImageView"
+        app:layout_constraintEnd_toEndOf="@+id/registerActivity_nameLayout"
+        app:layout_constraintStart_toStartOf="@+id/registerActivity_nameLayout"
+        app:startIconDrawable="@drawable/ic_username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerActivity_nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_surname"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerActivity_passwordLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/registerActivity_surnameLayout"
+        app:layout_constraintStart_toStartOf="@+id/registerActivity_usernameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/registerActivity_usernameLayout"
+        app:startIconDrawable="@drawable/ic_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerActivity_passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/normal_text_password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerActivity_emailLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/registerActivity_surnameLayout"
+        app:layout_constraintStart_toStartOf="@+id/registerActivity_profileImageView"
+        app:layout_constraintTop_toBottomOf="@+id/registerActivity_profileImageView"
+        app:startIconDrawable="@drawable/ic_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerActivity_emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_email"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerActivity_usernameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/registerActivity_emailLayout"
+        app:layout_constraintStart_toStartOf="@+id/registerActivity_emailLayout"
+        app:layout_constraintTop_toBottomOf="@+id/registerActivity_emailLayout"
+        app:startIconDrawable="@drawable/ic_username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerActivity_usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/normal_text_username" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerActivity_ageLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/registerActivity_passwordLayout"
+        app:layout_constraintStart_toStartOf="@+id/registerActivity_passwordLayout"
+        app:layout_constraintTop_toBottomOf="@+id/registerActivity_passwordLayout"
+        app:startIconDrawable="@drawable/ic_username">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/registerActivity_ageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_age"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/registerActivity_countrySpinnerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/registerActivity_countryTextView"
+        app:layout_constraintEnd_toEndOf="@+id/registerActivity_ageLayout"
+        app:layout_constraintStart_toEndOf="@+id/registerActivity_countryTextView"
+        app:layout_constraintTop_toTopOf="@+id/registerActivity_countryTextView" />
+
+    <TextView
+        android:id="@+id/registerActivity_countryTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/select_country"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/registerActivity_ageLayout"
+        app:layout_constraintTop_toBottomOf="@+id/registerActivity_ageLayout" />
+
+    <Button
+        android:id="@+id/registerActivity_registerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:minHeight="56dp"
+        android:text="@string/button_text_register"
+        app:layout_constraintEnd_toEndOf="@+id/registerActivity_ageLayout"
+        app:layout_constraintStart_toStartOf="@+id/registerActivity_ageLayout"
+        app:layout_constraintTop_toBottomOf="@+id/registerActivity_countryTextView" />
+
+    <ImageView
+        android:id="@+id/registerActivity_profileImageView"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="140dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/select_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_username" />
+
+    <ProgressBar
+        android:id="@+id/registerActivity_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

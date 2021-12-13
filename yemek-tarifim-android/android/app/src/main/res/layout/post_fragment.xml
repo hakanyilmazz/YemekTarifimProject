@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.user.fragment.post.PostFragment">
+
+    <ScrollView
+        android:id="@+id/postFragment_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/postFragment_recipeNameInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:hint="@string/recipe_name"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/postFragment_clickImageText" />
+
+            <ImageView
+                android:id="@+id/postFragment_recipeImage"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="173dp"
+                android:layout_height="136dp"
+                android:contentDescription="@string/select_photo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_fastfood_24" />
+
+            <ImageView
+                android:id="@+id/postFragment_addRecipeContent"
+                style="?android:borderlessButtonStyle"
+                android:layout_width="62dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/add_recipe_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:srcCompat="@drawable/ic_baseline_library_add_24" />
+
+            <EditText
+                android:id="@+id/postFragment_recipeDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/recipe_detail"
+                android:inputType="textMultiLine"
+                android:minHeight="100dp"
+                app:layout_constraintEnd_toEndOf="@+id/postFragment_recipeNameInput"
+                app:layout_constraintStart_toStartOf="@+id/postFragment_recipeNameInput"
+                app:layout_constraintTop_toBottomOf="@+id/postFragment_recipeNameInput" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/postFragment_recipeDetail"
+                app:layout_constraintStart_toStartOf="@+id/postFragment_recipeDetail"
+                app:layout_constraintTop_toBottomOf="@+id/postFragment_recipeDetail">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/postFragment_clickImageText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/click_image_for_select_recipe_photo"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/postFragment_recipeImage" />
+
+            <TextView
+                android:id="@+id/postFragment_addRecipeContentText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/title_add_recipe_content"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/postFragment_addRecipeContent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/postFragment_floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/share_recipe"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_share_24"
+        app:backgroundTint="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
+
+    <ProgressBar
+        android:id="@+id/postFragment_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
