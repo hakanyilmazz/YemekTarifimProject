@@ -14,5 +14,8 @@
     - Python latest version
 * Machine Learning Service (Python app)
     - Flask library
+* Database
+    - MongoDB Server latest version
+    - MongoDB Compass program latest version
 
 Note: My Lifechain algorithm is like blockchain but it has difference. It store latest score. It deletes other scores for user. So it name is lifechain. It is like a life. Always upgraded and always healthy. User data is deleting if user plays lifechain data. And user's score starts with 0.
