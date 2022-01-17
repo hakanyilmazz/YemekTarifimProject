@@ -1,4 +1,4 @@
-# YemekTarifimProject
+# YemekTarifimProject (Recipes)
  University final year project
 
 * Websocket (Javascript app)
